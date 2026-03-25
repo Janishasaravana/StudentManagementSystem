@@ -50,9 +50,9 @@ public void update(int id,String name)throws ClassNotFoundException,SQLException
 	
 	String q="update studentdb set name=? where id =?";
 	PreparedStatement ps = conn.prepareStatement(q);
-	
-	ps.setInt(1,id);
-	ps.setString(2, name);
+
+	ps.setString(1, name);
+	ps.setInt(2,id);
 //	ps.setString(3, course);
 	ps.executeUpdate();
 	conn.close();
