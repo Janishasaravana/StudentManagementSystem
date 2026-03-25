@@ -33,6 +33,11 @@ public String update(@RequestParam int id,@RequestParam String name) throws Clas
 	service.updateStudent(id,name);
 	return " Student Updated successfully";
 }
+	@DeleteMapping
+public String delete(@RequestParam int id) throws Exception {
+    service.deleteStudent(id);
+    return "Student deleted successfully";
+}
 
 
 }
